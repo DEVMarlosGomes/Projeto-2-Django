@@ -1,86 +1,104 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Minhas Receitas</title>
-    <script src="https://cdn.tailwindcss.com"></script> <!-- Esta tag serve para importar o Tailwind CSS na sua página web de forma rápida e prática, direto via CDN (Content Delivery Network). -->
-    
-    <link rel="stylesheet" href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <style> 
-        body {
-            font-family: 'Inter', sans-serif;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cozinha do Marlos</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+  </style>
 </head>
-<body class="bg-gray-100 text-gray-900"> <!--Este comando HTML e CSS significa que a página terá um fundo cinza claro e texto cinza escuro.-->
-    <!-- Cabeçalho da Página -->
-    <header class="bg-gray-900 text-white p-6 shadow-lg rounded-b-lg">
-        <div class="container mx-auto flex flex-col sm:flex-row items-center justify-center"> <!-- Alterado para 'justify-center' para centralizar o conteúdo -->
-            <!-- Agrupamento para o Ícone e Título (Centralizado) -->
-            <div class="flex items-center mb-4 sm:mb-0">
-                <div class="text-4xl mr-4">
-                    <i class="fas fa-utensils"></i> <!-- Ícone de utensílios (faca e garfo) -->
-                </div>
-                <!-- Título da Página -->
-                <h1 class="text-4xl font-bold text-center sm:text-left">
-                    Minhas Receitas Deliciosas
-                </h1>
-            </div>
-            <nav class="mt-4 sm:mt-0">
-                <!-- Conteúdo de navegação futuro aqui -->
-            </nav>
+<body class="bg-gray-100 text-gray-900">
+
+  <!-- Cabeçalho -->
+  <header class="bg-gray-900 text-white p-6 shadow-lg rounded-b-lg">
+    <div class="container mx-auto flex flex-col sm:flex-row items-center justify-center">
+      <div class="flex items-center mb-4 sm:mb-0">
+        <div class="text-4xl mr-4">
+          <i class="fas fa-utensils"></i>
         </div>
-    </header>
+        <h1 class="text-4xl font-bold text-center sm:text-left">
+          🍳 Comida de Vó
+        </h1>
+      </div>
+    </div>
+  </header>
 
-    <section class="container mx-auto mt-8 p-4 flex justify-center">
-        <div class="w-full max-w-lg flex bg-white rounded-full shadow-md overflow-hidden">
-            <input type="text" placeholder="Pesquisar receitas..." class="flex-grow p-3 text-gray-700 focus:outline-none focus:ring-2 focus:ring-orange-500 rounded-l-full pl-5" />
-            <button class="bg-orange-500 hover:bg-orange-600 text-white p-3 rounded-r-full transition duration-300 ease-in-out flex items-center justify-center">
-                <i class="fas fa-search mr-2"></i> Pesquisar 
-            </button>
-        </div>
-    </section>
+  <!-- Campo de pesquisa -->
+  <section class="container mx-auto mt-8 p-4 flex justify-center">
+    <div class="w-full max-w-lg flex bg-white rounded-full shadow-md overflow-hidden">
+      <input type="text" placeholder="Pesquisar receitas..." class="flex-grow p-3 text-gray-700 focus:outline-none focus:ring-2 focus:ring-orange-500 rounded-l-full pl-5" />
+      <button class="bg-orange-500 hover:bg-orange-600 text-white p-3 rounded-r-full transition duration-300 ease-in-out flex items-center justify-center">
+        <i class="fas fa-search mr-2"></i> Pesquisar 
+      </button>
+    </div>
+  </section>
 
-   <!--receita 1-->
-    <main class="container mx-auto p-6 mt-8 bg-white rounded-lg shadow-md">
-    <h2 class="text-2xl font-semibold mb-6 text-center">Nossas Últimas Receitas</h2>
+  <!-- CONTAINER 1: Boas-vindas -->
+  <main class="container mx-auto p-6 mt-12 bg-white rounded-lg shadow-md">
+    <h2 class="text-2xl font-semibold mb-4">👋 Bem-vindo à Comida de vó sua página de receitas!</h2>
+    <p class="text-lg text-gray-700">Aqui você poderá organizar e compartilhar suas receitas favoritas.</p>
+    <p class="mt-4 text-gray-600">Este é o início da sua jornada culinária com Django.</p>
+  </main>
 
-    <!-- Container único para os cards -->
+  <!-- CONTAINER 2: Nossas Últimas Receitas -->
+  <main class="container mx-auto p-6 mt-12 bg-white rounded-lg shadow-md">
+    <h2 class="text-2xl font-semibold mb-6 text-center">📜 Nossas Últimas Receitas</h2>
     <div class="flex flex-wrap justify-center gap-6">
 
-        <!-- Receita 1 -->
-        <div class="w-full sm:w-[calc(50%-1.5rem)] lg:w-[calc(33.333%-1.5rem)] bg-gray-50 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 ease-in-out">
-            <h3 class="text-xl font-bold mb-2 text-gray-800">Receita de Bolo de Chocolate</h3>
-            <p class="text-gray-600 mb-4">Um bolo clássico, úmido e delicioso, perfeito para qualquer ocasião.</p>
-            <a href="#" class="text-orange-600 hover:text-orange-600 font-semibold">Ver Receita &rarr;</a>
-        </div>
+      <!-- Receita 1 -->
+      <div class="w-full sm:w-[calc(50%-1.5rem)] lg:w-[calc(33.333%-1.5rem)] bg-gray-50 p-6 rounded-lg shadow-md hover:shadow-lg transition">
+        <h3 class="text-xl font-bold mb-2 text-gray-800">🍫 Bolo de Chocolate</h3>
+        <p class="text-gray-600 mb-4">Um bolo clássico, úmido e delicioso, perfeito para qualquer ocasião.</p>
+        <a href="#" class="text-orange-600 hover:text-orange-700 font-semibold">Ver Receita &rarr;</a>
+      </div>
 
-        <!-- Receita 2 -->
-        <div class="w-full sm:w-[calc(50%-1.5rem)] lg:w-[calc(33.333%-1.5rem)] bg-gray-50 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 ease-in-out">
-            <h3 class="text-xl font-bold mb-2 text-gray-800">Receita de Frango Assado com Ervas</h3>
-            <p class="text-gray-600 mb-4">Um Frango Assado delicioso e muito bem temperado, perfeito para qualquer ocasião.</p>
-            <a href="#" class="text-orange-600 hover:text-orange-600 font-semibold">Ver Receita &rarr;</a>
-        </div>
+      <!-- Receita 2 -->
+      <div class="w-full sm:w-[calc(50%-1.5rem)] lg:w-[calc(33.333%-1.5rem)] bg-gray-50 p-6 rounded-lg shadow-md hover:shadow-lg transition">
+        <h3 class="text-xl font-bold mb-2 text-gray-800">🍗 Frango Assado com Ervas</h3>
+        <p class="text-gray-600 mb-4">Um frango assado delicioso e bem temperado, perfeito para qualquer ocasião.</p>
+        <a href="#" class="text-orange-600 hover:text-orange-700 font-semibold">Ver Receita &rarr;</a>
+      </div>
 
-        <!-- Receita 3 -->
-        <div class="w-full sm:w-[calc(50%-1.5rem)] lg:w-[calc(33.333%-1.5rem)] bg-gray-50 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 ease-in-out">
-            <h3 class="text-xl font-bold mb-2 text-gray-800">Receita de Morango do Amor</h3>
-            <p class="text-gray-600 mb-4">Um doce da atualidade, crocante, macio e delicioso, perfeito para entrar na trend.</p>
-            <a href="#" class="text-orange-600 hover:text-orange-600 font-semibold">Ver Receita &rarr;</a>
-        </div>
+      <!-- Receita 3 -->
+      <div class="w-full sm:w-[calc(50%-1.5rem)] lg:w-[calc(33.333%-1.5rem)] bg-gray-50 p-6 rounded-lg shadow-md hover:shadow-lg transition">
+        <h3 class="text-xl font-bold mb-2 text-gray-800">🍓 Morango do Amor</h3>
+        <p class="text-gray-600 mb-4">Um doce crocante, macio e delicioso, perfeito para festas e eventos.</p>
+        <a href="#" class="text-orange-600 hover:text-orange-700 font-semibold">Ver Receita &rarr;</a>
+      </div>
+
+      <!-- Receita 4 -->
+      <div class="w-full sm:w-[calc(50%-1.5rem)] lg:w-[calc(33.333%-1.5rem)] bg-gray-50 p-6 rounded-lg shadow-md hover:shadow-lg transition">
+        <h3 class="text-xl font-bold mb-2 text-gray-800">🍝 Lasanha Caseira</h3>
+        <p class="text-gray-600 mb-4">Lasanha com molho caseiro, carne moída e bastante queijo!</p>
+        <a href="#" class="text-orange-600 hover:text-orange-700 font-semibold">Ver Receita &rarr;</a>
+      </div>
+
+      <!-- Receita 5 -->
+      <div class="w-full sm:w-[calc(50%-1.5rem)] lg:w-[calc(33.333%-1.5rem)] bg-gray-50 p-6 rounded-lg shadow-md hover:shadow-lg transition">
+        <h3 class="text-xl font-bold mb-2 text-gray-800">🥞 Panqueca Americana</h3>
+        <p class="text-gray-600 mb-4">Fofinhas, leves e ideais para café da manhã com frutas e mel.</p>
+        <a href="#" class="text-orange-600 hover:text-orange-700 font-semibold">Ver Receita &rarr;</a>
+      </div>
+
+      <!-- Receita 6 -->
+      <div class="w-full sm:w-[calc(50%-1.5rem)] lg:w-[calc(33.333%-1.5rem)] bg-gray-50 p-6 rounded-lg shadow-md hover:shadow-lg transition">
+        <h3 class="text-xl font-bold mb-2 text-gray-800">🥗 Salada Tropical</h3>
+        <p class="text-gray-600 mb-4">Refrescante e saudável com frutas tropicais e folhas verdes.</p>
+        <a href="#" class="text-orange-600 hover:text-orange-700 font-semibold">Ver Receita &rarr;</a>
+      </div>
 
     </div>
-</main>
+  </main>
 
-    <main class="container mx-auto p-6 mt-8 bg-white rounded-lg shadow-md">
-        <h2 class="text-2xl font-semibold mb-4">Bem-vindo à sua página de receitas!</h2>
-        <p class="text-lg text-gray-700"> Aqui você poderá organizar e compartilhar suas receitas favoritas.</p>
-            <!-- Cartões de receitas serão adicionados aqui -->
+  <!-- Rodapé -->
+  <footer class="mt-12 p-6 text-center text-gray-600">
+    <p>&copy; 2025 Cozinha do Marlos. Todos os direitos reservados.</p>
+  </footer>
 
-            <p class="mt-4 text-gray-600">Este é o inicio da sua jornada culinária com Django. </p>
-    </main>
-
-    <footer class="mt-12 p-6 text-center text-gray-600">
-        <p>&copy; 2025 Minhas Receitas. Todos os direitos reservados a Marlos.</p>
-    </footer>
+</body>
+</html>
